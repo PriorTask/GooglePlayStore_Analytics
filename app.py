@@ -97,7 +97,7 @@ def save_plot_as_html(fig, filename, insight):
     fig.write_html(filepath, full_html=False, include_plotlyjs='inline')
 
 plot_width=400
-plot_height=300
+plot_height=200
 plot_bg_color='black'
 text_color='white'
 title_font={'size':16}
