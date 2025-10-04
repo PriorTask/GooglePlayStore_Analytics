@@ -969,7 +969,7 @@ with col7:
     styled_insight("Categories such as Business and Productivity lead in revenue generation, indicating their monetization potential.")
 
 with col8:
-    styled_heading("Revenue by Category")
+    styled_heading("Apps per Category")
     st.plotly_chart(fig8, use_container_width=True)
     styled_insight("Action and Casual genres are the most common, reflecting users' preference for engaging and easy-to-play games.")
 
