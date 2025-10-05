@@ -845,7 +845,7 @@ st.markdown(
 st.markdown(
     """
     <div class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_Google.png/800px-Logo_2013_Google.png" alt="Google" width="180">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_Google.png/800px-Logo_2013_Google.png" alt="Google" width="100">
         <h1 style="color: white; margin: 0;">Google Play Store Reviews Analytics</h1>
         <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" width="200" height="300">
     </div>
@@ -926,7 +926,7 @@ col1, col2, col3 = st.columns(3)
 
 
 with col1:
-    fig1.update_layout(height=400)
+    fig1.update_layout(height=300)
     styled_heading("Top Categories on Play Store")
     st.plotly_chart(fig1, use_container_width=True)
     styled_insight("The Top Categories on Play Store are dominated by tools, entertainment, and productivity apps.")
