@@ -926,7 +926,7 @@ col1, col2, col3 = st.columns(3)
 
 
 with col1:
-    fig1.update_layout(height=200)
+    fig1.update_layout(height=400)
     styled_heading("Top Categories on Play Store")
     st.plotly_chart(fig1, use_container_width=True)
     styled_insight("The Top Categories on Play Store are dominated by tools, entertainment, and productivity apps.")
