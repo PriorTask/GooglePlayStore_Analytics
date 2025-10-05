@@ -112,9 +112,7 @@ fig1 = px.bar(
     y=category_counts.values,
     labels={'x': 'Category', 'y': 'Count'},
     color=category_counts.index,
-    color_discrete_sequence=px.colors.sequential.Plasma,
-     
-      
+    color_discrete_sequence=px.colors.sequential.Plasma,   
 )
 
 # Customize layout
@@ -928,6 +926,7 @@ col1, col2, col3 = st.columns(3)
 
 
 with col1:
+    fig1.update_layout(height=200)
     styled_heading("Top Categories on Play Store")
     st.plotly_chart(fig1, use_container_width=True)
     styled_insight("The Top Categories on Play Store are dominated by tools, entertainment, and productivity apps.")
