@@ -824,7 +824,7 @@ st.markdown(
         align-items: center;
         justify-content: center;
         padding: 5px;
-        background-color: #4a80c2;
+        background-color: #81a2cc;
         margin-top: 0px;
     }
 
@@ -920,6 +920,9 @@ def styled_insight(text):
     )
 
 
+for fig in [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig14]:
+    if fig is not None:
+        fig.update_layout(height=300)
 
 
 col1, col2, col3 = st.columns(3)
@@ -1006,6 +1009,7 @@ col13, col14, col15 = st.columns(3)
 with col14:
     styled_heading("Trend of Total Installs Over Time by App Category")
     if fig14 is not None:
+        fig14.update_layout(height=300)
         st.plotly_chart(fig14, use_container_width=True, key="fig14_chart")
         styled_insight("Communication apps saw a massive spike in installs around 2018, far surpassing other categories.")
     else:
