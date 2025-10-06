@@ -823,7 +823,7 @@ st.markdown(
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px;
+        padding: 5px;
         background-color: #4a80c2;
         margin-top: 0px;
     }
