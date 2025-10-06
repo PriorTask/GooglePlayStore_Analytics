@@ -815,7 +815,7 @@ st.markdown(
     }
 
     .stApp {
-        background-color: onyx;
+        background-color: #72f2f0;
         color: white;
     }
 
