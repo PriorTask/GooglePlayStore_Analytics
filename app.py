@@ -924,12 +924,14 @@ for fig in [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, 
     if fig is not None:
         fig.update_layout(height=350)
 
+def styled_heading(text):
+    st.markdown(f"### {text.upper()}")
+
 
 col1, col2, col3 = st.columns(3)
 
 
 with col1:
-    fig1.update_layout(height=300)
     styled_heading("Top Categories on Play Store")
     st.plotly_chart(fig1, use_container_width=True)
     styled_insight("The Top Categories on Play Store are dominated by tools, entertainment, and productivity apps.")
