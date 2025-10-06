@@ -815,7 +815,7 @@ st.markdown(
     }
 
     .stApp {
-        background-color: #72f2f0;
+        background-color: #222366;
         color: white;
     }
 
@@ -823,8 +823,8 @@ st.markdown(
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px;
-        background-color: #444;
+        padding: 15px;
+        background-color: #4a80c2;
         margin-top: 0px;
     }
 
