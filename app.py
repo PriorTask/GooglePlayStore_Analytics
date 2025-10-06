@@ -809,7 +809,7 @@ st.markdown(
     body {
         font-family: Arial, sans-serif;
         background-color: green;
-        color: #fff;
+        color: #72f2f0;
         margin: 0;
         padding: 0;
     }
