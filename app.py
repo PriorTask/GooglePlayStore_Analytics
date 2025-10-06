@@ -823,14 +823,14 @@ st.markdown(
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 15px;
+        padding: 10px;
         background-color: #4a80c2;
         margin-top: 0px;
     }
 
     .header img{
         margin: 0 10px;
-        height: 50px;
+        height: 40px;
     }
 
     
