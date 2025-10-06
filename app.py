@@ -100,8 +100,8 @@ plot_width=400
 plot_height=100
 plot_bg_color='black'
 text_color='white'
-title_font={'size':16}
-axis_font={'size':12}
+title_font={'size':12}
+axis_font={'size':10}
 
 # 1.) To visualize the top 10 app categories in the Google Play Store
 category_counts = apps_df['Category'].value_counts().nlargest(10)
@@ -125,13 +125,13 @@ fig1.update_layout(
         tickfont=dict(size=12)   
     ),
     yaxis=dict(
-        title_font=dict(size=18),
+        title_font=dict(size=16),
         tickfont=dict(size=12)   
     ),
 
     # Increase legend font size (color values on right)
     legend=dict(
-        font=dict(size=18),
+        font=dict(size=12),
         title_font=dict(size=18)
     ),
     legend_title=dict(
@@ -922,7 +922,7 @@ def styled_insight(text):
 
 for fig in [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig14]:
     if fig is not None:
-        fig.update_layout(height=350)
+        fig.update_layout(height=300)
 
 def styled_heading(text):
     st.markdown(f"### {text.upper()}")
