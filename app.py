@@ -122,11 +122,11 @@ fig1.update_layout(
     font_color='white',
     xaxis=dict(
         title_font=dict(size=18),
-        tickfont=dict(size=12)   
+        tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=14),
-        tickfont=dict(size=12)   
+        title_font=dict(size=18),
+        tickfont=dict(size=14)   
     ),
 
     # Increase legend font size (color values on right)
@@ -167,7 +167,7 @@ fig2.update_layout(
     # Increase legend font size (color values on right)
     legend=dict(
         font=dict(size=18),
-        title_font=dict(size=18)
+        title_font=dict(size=14)
     ),
     margin=dict(l=10, r=10, t=30, b=10)
 )
@@ -192,23 +192,15 @@ fig3.update_layout(
     font_color='white',
     # title_font=dict(size=16),
     xaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        title_font=dict(size=18),
+        tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        title_font=dict(size=18),
+        tickfont=dict(size=14)   
     ),
 
     # Increase legend font size (color values on right)
-    legend=dict(
-        font=dict(size=18),
-        title_font=dict(size=18)
-    ),
-    legend_title=dict(
-        text="Color",
-    ),
-    margin=dict(l=10, r=10, t=30, b=10)
 )
 
 # 4.) Displaying sentiment analysis using bar chart 
