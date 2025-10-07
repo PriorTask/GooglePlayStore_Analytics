@@ -233,7 +233,7 @@ fig4.update_layout(
 
     # Increase legend font size (color values on right)
     legend=dict(
-        font=dict(size=18),
+        font=dict(size=20),
         title_font=dict(size=18)
     ),
     legend_title=dict(
@@ -262,18 +262,18 @@ fig5.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18),
+        title_font=dict(size=16),
+        tickfont=dict(size=12),
         domain=[0,0.8]  
     ),
     yaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        title_font=dict(size=16),
+        tickfont=dict(size=12)   
     ),
     # Increase legend font size (color values on right)
     legend=dict(
-        font=dict(size=18),
-        title_font=dict(size=18),
+        font=dict(size=16),
+        title_font=dict(size=12),
         x=0.85,
         y=1
     ),
