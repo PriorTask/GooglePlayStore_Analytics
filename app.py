@@ -100,8 +100,8 @@ plot_width=400
 plot_height=100
 plot_bg_color='black'
 text_color='white'
-title_font={'size':12}
-axis_font={'size':10}
+# title_font={'size':12}
+# axis_font={'size':10}
 
 # 1.) To visualize the top 10 app categories in the Google Play Store
 category_counts = apps_df['Category'].value_counts().nlargest(10)
@@ -125,7 +125,7 @@ fig1.update_layout(
         tickfont=dict(size=12)   
     ),
     yaxis=dict(
-        title_font=dict(size=16),
+        title_font=dict(size=14),
         tickfont=dict(size=12)   
     ),
 
