@@ -246,8 +246,8 @@ fig4.update_layout(
 installs_by_category = apps_df.groupby('Category')['Installs'].sum().nlargest(10)
 
 fig5 = px.bar(
-    x=installs_by_category.index,
-    y=installs_by_category.values,
+    x=installs_by_category.values,
+    y=installs_by_category.index,
     orientation='h',  # horizontal bar chart 
     labels={'x': 'Installs', 'y': 'Category'},
     color=installs_by_category.index,
