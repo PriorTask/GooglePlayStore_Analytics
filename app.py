@@ -268,7 +268,7 @@ fig5.update_layout(
     yaxis=dict(
         title_font=dict(size=16),
         tickfont=dict(size=12),
-        domain=[0,0.8]           
+        domain=[0,0.5]           
     ),
     # Increase legend font size (color values on right)
     legend=dict(
