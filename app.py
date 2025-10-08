@@ -274,7 +274,7 @@ fig5.update_layout(
     legend=dict(
         font=dict(size=16),
         title_font=dict(size=12),
-        x=1,
+        x=1.2,
         y=1
     ),
     legend_title=dict(
