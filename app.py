@@ -272,8 +272,8 @@ fig5.update_layout(
     ),
     # Increase legend font size (color values on right)
     legend=dict(
-        font=dict(size=16),
-        title_font=dict(size=12),
+        font=dict(size=12),
+        title_font=dict(size=16),
         x=1.2,
         y=1
     ),
