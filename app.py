@@ -180,10 +180,11 @@ fig3 = px.histogram(
     x='Rating',
     nbins=20,
     # title="Rating Distribution",
-    color_discrete_sequence=['#636EFA'],
-     
-      
+    color_discrete_sequence=['#636EFA'],  
+    y='Count'       
 )
+
+
 
 # Customize layout
 fig3.update_layout(
