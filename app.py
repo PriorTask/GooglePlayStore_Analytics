@@ -182,9 +182,6 @@ fig3 = px.histogram(
     # title="Rating Distribution",
     color_discrete_sequence=['#636EFA'],        
 )
-
-
-
 # Customize layout
 fig3.update_layout(
     plot_bgcolor='black',
