@@ -892,7 +892,7 @@ def styled_heading(text):
     st.markdown(
         f"""
         <h1 style="font-size:20px; color:white; text-align:center;">
-            {text}
+            {text.upper()}
         </h1>
         """,
         unsafe_allow_html=True
@@ -901,7 +901,7 @@ def styled_heading(text):
 def styled_insight(text):
     st.markdown(
         f"""
-        <p style="font-size:18px; color:#d3d3d3; line-height:1.5; text-align:center;">
+        <p style="font-size:16px; color:#d3d3d3; line-height:1.5; text-align:center;">
             💡 <b>Insight:</b> {text}
         </p>
         """,
@@ -912,9 +912,6 @@ def styled_insight(text):
 for fig in [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig14]:
     if fig is not None:
         fig.update_layout(height=300)
-
-def styled_heading(text):
-    st.markdown(f"### {text.upper()}")
 
 
 col1, col2, col3 = st.columns(3)
