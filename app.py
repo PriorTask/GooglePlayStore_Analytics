@@ -196,6 +196,7 @@ fig3.update_layout(
         tickfont=dict(size=14)   
     ),
     yaxis=dict(
+        title=dict(text="Count"),
         title_font=dict(size=18),
         tickfont=dict(size=14)   
     ),
@@ -237,7 +238,7 @@ fig4.update_layout(
         title_font=dict(size=18)
     ),
     legend_title=dict(
-        text="Color",
+        text="Score",
     ),
     margin=dict(l=10, r=10, t=30, b=10)
 )
@@ -262,11 +263,11 @@ fig5.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=16),
+        title_font=dict(size=18),
         tickfont=dict(size=12)  
     ),
     yaxis=dict(
-        title_font=dict(size=16),
+        title_font=dict(size=18),
         tickfont=dict(size=12),
         domain=[0,0.9]           
     ),
@@ -278,7 +279,7 @@ fig5.update_layout(
         y=1
     ),
     legend_title=dict(
-        text="Color",
+        text="Installs Category",
     ),
     margin=dict(l=10, r=10, t=20, b=10)
 )
@@ -305,10 +306,10 @@ fig6.update_layout(
     font_color='white',
     xaxis=dict(
         title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        tickfont=dict(size=13)   
     ),
     yaxis=dict(
-        title_font=dict(size=20),
+        title_font=dict(size=18),
         tickfont=dict(size=18)   
     ),
 
@@ -345,7 +346,7 @@ fig7.update_layout(
     font_color='white',
     xaxis=dict(
         title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        tickfont=dict(size=13)   
     ),
     yaxis=dict(
         title_font=dict(size=20),
@@ -396,6 +397,7 @@ fig8.update_layout(
 
     # Increase legend font size (color values on right)
     legend=dict(
+        title=dict(text="Revenue Category"),
         font=dict(size=18),
         title_font=dict(size=20)
     ),
