@@ -359,6 +359,7 @@ fig7.update_layout(
         title_font=dict(size=18)
     ),
     legend_title=dict(
+        tickfont=dict(size=16),
         text="Color",
     ),
     margin=dict(l=10, r=10, t=30, b=10)
