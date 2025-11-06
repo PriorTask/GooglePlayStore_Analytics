@@ -387,7 +387,7 @@ fig8.update_layout(
     font_color='white',
     xaxis=dict(
         title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        tickfont=dict(size=12)   
     ),
     yaxis=dict(
         title_font=dict(size=20),
