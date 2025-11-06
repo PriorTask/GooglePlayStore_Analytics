@@ -332,7 +332,7 @@ fig7 = px.bar(
     x=revenue_by_category.index,
     y=revenue_by_category.values,
     labels={'x': 'Category', 'y': 'Revenue'},
-    color=revenue_by_category.index,
+    color=revenue_by_category.index.to_list(),
     color_discrete_sequence=px.colors.sequential.Greens,
 )
 
@@ -352,12 +352,13 @@ fig7.update_layout(
     legend=dict(
         font=dict(size=18),
         title=dict(
-            text="App Category",   
+            text="App Category",
             font=dict(size=18)
         )
     ),
     margin=dict(l=10, r=10, t=30, b=10)
 )
+
 
 # figure 8 
 # Generate a bar graph
