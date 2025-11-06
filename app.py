@@ -355,13 +355,13 @@ fig7.update_layout(
 
     # Increase legend font size (color values on right)
     legend=dict(
-        font=dict(size=18),
-        title=dict(
-            text="Color", 
-            font=dict(size=18)
-        ), 
-        tickfont=dict(size=16)
+    font=dict(size=18),
+    title=dict(
+        text="App Category",
+        font=dict(size=18)
+    )
     ),
+
     margin=dict(l=10, r=10, t=30, b=10)
 )
 
