@@ -267,7 +267,7 @@ fig5.update_layout(
         tickfont=dict(size=12)  
     ),
     yaxis=dict(
-        title_font=dict(size=18),
+        title_font=dict(size=16),
         tickfont=dict(size=12),
         domain=[0,0.9]           
     ),
@@ -346,7 +346,7 @@ fig7.update_layout(
     font_color='white',
     xaxis=dict(
         title_font=dict(size=20),
-        tickfont=dict(size=13)   
+        tickfont=dict(size=12)   
     ),
     yaxis=dict(
         title_font=dict(size=20),
