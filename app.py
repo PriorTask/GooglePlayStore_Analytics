@@ -138,7 +138,7 @@ fig1.update_layout(
     #     text="Color",
     # ),
     # margin=dict(l=10, r=10, t=30, b=10)
-    
+    showlegend=False
 )
 
 
