@@ -111,8 +111,8 @@ fig1 = px.bar(
     x=category_counts.index,
     y=category_counts.values,
     labels={'x': 'Category', 'y': 'Count'},
-    color=category_counts.index,
-    color_discrete_sequence=px.colors.sequential.Plasma,   
+    # color=category_counts.index,
+    # color_discrete_sequence=px.colors.sequential.Plasma,   
 )
 
 # Customize layout
@@ -861,7 +861,7 @@ st.markdown(
         font-size: 22px !important;
     }
     h2, h3 {
-        font-size: 18px !important;
+        font-size: 18px !important;                                                         
     }
     p {
         font-size: 16px !important;
