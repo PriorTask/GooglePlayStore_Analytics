@@ -111,8 +111,8 @@ fig1 = px.bar(
     x=category_counts.index,
     y=category_counts.values,
     labels={'x': 'Category', 'y': 'Count'},
-    # color=category_counts.index,
-    # color_discrete_sequence=px.colors.sequential.Plasma,   
+    color=category_counts.index,
+    color_discrete_sequence=px.colors.sequential.Plasma,   
 )
 
 # Customize layout
@@ -130,14 +130,15 @@ fig1.update_layout(
     ),
 
     # Increase legend font size (color values on right)
-    legend=dict(
-        font=dict(size=12),
-        title_font=dict(size=18)
-    ),
-    legend_title=dict(
-        text="Color",
-    ),
-    margin=dict(l=10, r=10, t=30, b=10)
+    # legend=dict(
+    #     font=dict(size=12),
+    #     title_font=dict(size=18)
+    # ),
+    # legend_title=dict(
+    #     text="Color",
+    # ),
+    # margin=dict(l=10, r=10, t=30, b=10)
+    
 )
 
 
