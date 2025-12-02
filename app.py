@@ -109,7 +109,7 @@ category_counts = apps_df['Category'].value_counts().nlargest(10)
 # build a dataframe with the points you want to add in the tooltip 
 # building a dataframe from category_counts series
 tooltip_df = category_counts.reset_index()
-tooltip_df=['category', 'count']
+tooltip_df.columns=['category', 'count']
 tooltip_df['share']=(tooltip_df['count']/tooltip_df['count'].sum())*100
 tooltip_df['rank']=tooltip_df['count'].rank(ascending=False).astype(int)
 
