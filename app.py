@@ -104,45 +104,53 @@ text_color='white'
 # axis_font={'size':10}
 
 # 1.) To visualize the top 5 app categories in the Google Play Store
+# 1.) To visualize the top 5 app categories in the Google Play Store
 category_counts = apps_df['Category'].value_counts().nlargest(5)
 
+# build a dataframe with the points you want to add in the tooltip 
+# building a dataframe from category_counts series
 tooltip_df = category_counts.reset_index()
-tooltip_df.columns = ['category', 'count']
-tooltip_df['share'] = (tooltip_df['count'] / tooltip_df['count'].sum()) * 100
-tooltip_df['rank'] = tooltip_df['count'].rank(ascending=False).astype(int)
+tooltip_df.columns=['category', 'count']
+tooltip_df['share']=(tooltip_df['count']/tooltip_df['count'].sum())*100
+tooltip_df['rank']=tooltip_df['count'].rank(ascending=False).astype(int)
 
-# --- FIGURE ---
+# Generate a bar graph
 fig1 = px.bar(
     tooltip_df,
-    x='category',
-    y='count',
-    custom_data=['share', 'rank'],
-    color='category', 
-    color_discrete_sequence=px.colors.sequential.Plasma,
-    labels={'category': 'CATEGORY', 'count': 'COUNT'}
+    x=category_counts.index,
+    y=category_counts.values,
+    labels={'x': 'Category', 'y': 'Count'},
+    color=category_counts.index,
+    color_discrete_sequence=px.colors.sequential.Plasma,   
+    custom_data=['share', 'rank']
 )
 
-# --- LAYOUT ---
+# Customize layout
 fig1.update_layout(
     plot_bgcolor='black',
     paper_bgcolor='black',
     font_color='white',
-    bargap=0.2,
-
     xaxis=dict(
-        tickfont=dict(size=14),
-        title_font=dict(size=15),
-        standoff=20
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        tickfont=dict(size=14),
-        title_font=dict(size=15),
-        standoff=20
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
-    showlegend=False,
-)
 
-# --- TOOLTIP ---
+    # Increase legend font size (color values on right)
+    # legend=dict(
+    #     font=dict(size=12),
+    #     title_font=dict(size=18)
+    # ),
+    # legend_title=dict(
+    #     text="Color",
+    # ),
+    # margin=dict(l=10, r=10, t=30, b=10)
+    showlegend=False
+)
+# Custom Tooltip
 fig1.update_traces(
     hovertemplate=
     'Category: %{x}<br>' +
@@ -151,7 +159,6 @@ fig1.update_traces(
     'Rank: %{customdata[1]}<br>' +
     '<extra></extra>'
 )
-
 # fig2: type analysis plot
 # analyzing distribution of free vs paid apps
 # since we're analyzing a categorical distribution with less than 5 or 6 categories, we use a pie chart
@@ -923,7 +930,7 @@ def styled_insight(text):
         """,
         unsafe_allow_html=True
     )
-    
+
 
 for fig in [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig14]:
     if fig is not None:
