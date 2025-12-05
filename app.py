@@ -821,6 +821,10 @@ st.markdown(
         margin: 0;
         padding: 0;
     }
+    .centered_heading{
+    text-align: center !important;
+    width: 100%;
+    }
 
     .stApp {
         background-color: #222366;
@@ -910,7 +914,7 @@ st.markdown(
 def styled_heading(text):
     st.markdown(
         f"""
-        <h1 style="font-size:20px; color:white; text-align:center;">
+        <h1 class="centered_heading" style="font-size:20px; color:white; text-align:center;">
             {text}
         </h1>
         """,
