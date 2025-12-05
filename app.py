@@ -914,7 +914,7 @@ st.markdown(
 def styled_heading(text):
     st.markdown(
         f"""
-        <h1 class="centered_heading" style="font-size:40px; color:white; text-align:center;">
+        <h1 class="centered_heading" style="font-size:35px; color:white; text-align:center;">
             {text.upper()}
         </h1>
         """,
