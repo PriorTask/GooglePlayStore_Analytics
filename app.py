@@ -103,8 +103,8 @@ text_color='white'
 # title_font={'size':12}
 # axis_font={'size':10}
 
-# 1.) To visualize the top 7 app categories in the Google Play Store
-category_counts = apps_df['Category'].value_counts().nlargest(7)
+# 1.) To visualize the top 5 app categories in the Google Play Store
+category_counts = apps_df['Category'].value_counts().nlargest(5)
 
 # build a dataframe with the points you want to add in the tooltip 
 # building a dataframe from category_counts series
@@ -130,11 +130,11 @@ fig1.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=18),
+        title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=18),
+        title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
 
