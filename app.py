@@ -104,7 +104,7 @@ text_color='white'
 # axis_font={'size':10}
 
 # 1.) To visualize the top 10 app categories in the Google Play Store
-category_counts = apps_df['Category'].value_counts().nlargest(10)
+category_counts = apps_df['Category'].value_counts().nlargest(5)
 
 # build a dataframe with the points you want to add in the tooltip 
 # building a dataframe from category_counts series
