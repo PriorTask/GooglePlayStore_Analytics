@@ -139,7 +139,7 @@ fig1.update_layout(
         title_font=dict(size=15),
         standoff=20
     ),
-    showlegend=False
+    showlegend=False,
 )
 
 # --- TOOLTIP ---
@@ -923,19 +923,11 @@ def styled_insight(text):
         """,
         unsafe_allow_html=True
     )
+    
 
-fig_list = [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig14]
-
-for i, fig in enumerate(fig_list, start=1):
-    try:
-        if fig is not None:
-            fig.update_layout(height=300)
-    except Exception as e:
-        st.write(f"❌ Error in fig{i}: {e}")
-
-# for fig in [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig14]:
-#     if fig is not None:
-#         fig.update_layout(height=300)
+for fig in [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig14]:
+    if fig is not None:
+        fig.update_layout(height=300)
 
 
 col1, col2, col3 = st.columns(3)
