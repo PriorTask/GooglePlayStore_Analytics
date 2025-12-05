@@ -103,8 +103,8 @@ text_color='white'
 # title_font={'size':12}
 # axis_font={'size':10}
 
-# 1.) To visualize the top 10 app categories in the Google Play Store
-category_counts = apps_df['Category'].value_counts().nlargest(5)
+# 1.) To visualize the top 7 app categories in the Google Play Store
+category_counts = apps_df['Category'].value_counts().nlargest(7)
 
 # build a dataframe with the points you want to add in the tooltip 
 # building a dataframe from category_counts series
@@ -943,7 +943,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     styled_heading("Top Categories on Play Store")
     st.plotly_chart(fig1, use_container_width=True)
-    styled_insight("The Top Categories on Play Store are dominated by tools, entertainment, and productivity apps.")
+    styled_insight("The Top Categories on Play Store are dominated by Family, Games and Tools; making up most of the app uploads.")
 
 with col2:
     styled_heading("App Type Distribution")
