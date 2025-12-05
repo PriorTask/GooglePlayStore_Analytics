@@ -106,50 +106,43 @@ text_color='white'
 # 1.) To visualize the top 5 app categories in the Google Play Store
 category_counts = apps_df['Category'].value_counts().nlargest(5)
 
-# build a dataframe with the points you want to add in the tooltip 
-# building a dataframe from category_counts series
 tooltip_df = category_counts.reset_index()
-tooltip_df.columns=['category', 'count']
-tooltip_df['share']=(tooltip_df['count']/tooltip_df['count'].sum())*100
-tooltip_df['rank']=tooltip_df['count'].rank(ascending=False).astype(int)
+tooltip_df.columns = ['category', 'count']
+tooltip_df['share'] = (tooltip_df['count'] / tooltip_df['count'].sum()) * 100
+tooltip_df['rank'] = tooltip_df['count'].rank(ascending=False).astype(int)
 
-# Generate a bar graph
+# --- FIGURE ---
 fig1 = px.bar(
     tooltip_df,
-    x=category_counts.index,
-    y=category_counts.values,
-    labels={'x': 'Category', 'y': 'Count'},
-    color=category_counts.index,
-    color_discrete_sequence=px.colors.sequential.Plasma,   
-    custom_data=['share', 'rank']
+    x='category',
+    y='count',
+    custom_data=['share', 'rank'],
+    color='category',   # If you want DIFFERENT shades of same color, use this
+    color_discrete_sequence=px.colors.sequential.Plasma,  # Or replace with single color
+    labels={'category': 'CATEGORY', 'count': 'COUNT'}
 )
 
-# Customize layout
+# --- LAYOUT ---
 fig1.update_layout(
     plot_bgcolor='black',
     paper_bgcolor='black',
     font_color='white',
+    bargap=0.2,
+
     xaxis=dict(
-        title_font=dict(size=16),
-        tickfont=dict(size=14)   
+        tickfont=dict(size=14),
+        title_font=dict(size=15),
+        standoff=20
     ),
     yaxis=dict(
-        title_font=dict(size=16),
-        tickfont=dict(size=14)   
+        tickfont=dict(size=14),
+        title_font=dict(size=15),
+        standoff=20
     ),
-
-    # Increase legend font size (color values on right)
-    # legend=dict(
-    #     font=dict(size=12),
-    #     title_font=dict(size=18)
-    # ),
-    # legend_title=dict(
-    #     text="Color",
-    # ),
-    # margin=dict(l=10, r=10, t=30, b=10)
     showlegend=False
 )
-# Custom Tooltip
+
+# --- TOOLTIP ---
 fig1.update_traces(
     hovertemplate=
     'Category: %{x}<br>' +
