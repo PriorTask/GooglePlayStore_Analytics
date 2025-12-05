@@ -129,7 +129,7 @@ fig1 = px.bar(
 fig1.update_layout(
     plot_bgcolor='black',
     paper_bgcolor='black',
-    font_color='white',
+    font=dict(color='white'),
     xaxis=dict(
         title_font=dict(size=16),
         tickfont=dict(size=14)   
@@ -148,7 +148,7 @@ fig1.update_layout(
     #     text="Color",
     # ),
     # margin=dict(l=10, r=10, t=30, b=10)
-    # showlegend=False
+    showlegend=False
 )
 # Custom Tooltip
 fig1.update_traces(
