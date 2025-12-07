@@ -110,8 +110,8 @@ category_counts = apps_df['Category'].value_counts().nlargest(5)
 # building a dataframe from category_counts series
 tooltip_df = category_counts.reset_index()
 tooltip_df.columns=['Category', 'Count']
-tooltip_df['share']=(tooltip_df['count']/tooltip_df['count'].sum())*100
-tooltip_df['rank']=tooltip_df['count'].rank(ascending=False).astype(int)
+tooltip_df['share']=(tooltip_df['Count']/tooltip_df['Count'].sum())*100
+tooltip_df['rank']=tooltip_df['Count'].rank(ascending=False).astype(int)
 
 # Generate a bar graph
 fig1 = px.bar(
