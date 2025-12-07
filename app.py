@@ -158,8 +158,10 @@ fig1.update_traces(
     'Share: %{customdata[0]:.2f}%<br>' +
     'Rank: %{customdata[1]}<br>' +
     '<extra></extra>',
-    marker=dict(line=dict(width=0), radius=10)  # Rounded bars
-)
+    marker=dict(
+        color="#6247ea",
+        cornerradius=10      # rounded bars
+    ))
 # fig2: type analysis plot
 # analyzing distribution of free vs paid apps
 # since we're analyzing a categorical distribution with less than 5 or 6 categories, we use a pie chart
