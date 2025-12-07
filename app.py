@@ -118,7 +118,7 @@ fig1 = px.bar(
     tooltip_df,
     x=category_counts.index,
     y=category_counts.values,
-    labels={'x': 'Category', 'y': 'Count'},
+    labels={'Category': 'Category', 'Count': 'Count'},
     # color=category_counts.index,
     color_discrete_sequence=["#6247ea"],   
     # color_discrete_sequence=px.colors.sequential.Plasma,   
