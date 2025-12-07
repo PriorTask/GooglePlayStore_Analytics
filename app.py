@@ -104,13 +104,12 @@ text_color='white'
 # axis_font={'size':10}
 
 # 1.) To visualize the top 5 app categories in the Google Play Store
-# 1.) To visualize the top 5 app categories in the Google Play Store
 category_counts = apps_df['Category'].value_counts().nlargest(5)
 
 # build a dataframe with the points you want to add in the tooltip 
 # building a dataframe from category_counts series
 tooltip_df = category_counts.reset_index()
-tooltip_df.columns=['category', 'count']
+tooltip_df.columns=['Category', 'Count']
 tooltip_df['share']=(tooltip_df['count']/tooltip_df['count'].sum())*100
 tooltip_df['rank']=tooltip_df['count'].rank(ascending=False).astype(int)
 
@@ -119,9 +118,10 @@ fig1 = px.bar(
     tooltip_df,
     x=category_counts.index,
     y=category_counts.values,
-    labels={'x': 'Category', 'y': 'Count'},
-    color=category_counts.index,
-    color_discrete_sequence=px.colors.sequential.Plasma,   
+    labels={'Category': 'Category', 'Count': 'Count'},
+    # color=category_counts.index,
+    color_discrete_sequence=["#6247ea"],   
+    # color_discrete_sequence=px.colors.sequential.Plasma,   
     custom_data=['share', 'rank']
 )
 
@@ -157,7 +157,8 @@ fig1.update_traces(
     'Count: %{y}<br>' +
     'Share: %{customdata[0]:.2f}%<br>' +
     'Rank: %{customdata[1]}<br>' +
-    '<extra></extra>'
+    '<extra></extra>',
+    marker=dict(line=dict(width=0), radius=10)  # Rounded bars
 )
 # fig2: type analysis plot
 # analyzing distribution of free vs paid apps
