@@ -120,9 +120,10 @@ fig1 = px.bar(
     # y=category_counts.values,
     x='Category',
     y='Count',
-    labels={'Category': 'Category', 'Count': 'Count'},
+    labels={'Category': 'CATEGORY', 'Count': 'COUNT'},
     # color=category_counts.index,
-    color_discrete_sequence=["#6247ea"],   
+    # color_discrete_sequence=["#6247ea"],   
+    color_discrete_sequence=["#6A5ACD", "#836FFF", "#9F7CFF"],   
     # color_discrete_sequence=px.colors.sequential.Plasma,   
     custom_data=['share', 'rank']
 )
