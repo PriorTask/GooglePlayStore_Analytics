@@ -110,20 +110,17 @@ category_counts = apps_df['Category'].value_counts().nlargest(5)
 # building a dataframe from category_counts series
 tooltip_df = category_counts.reset_index()
 tooltip_df.columns=['Category', 'Count']
-tooltip_df['share']=(tooltip_df['Count']/tooltip_df['Count'].sum())*100
-tooltip_df['rank']=tooltip_df['Count'].rank(ascending=False).astype(int)
+tooltip_df['share']=(tooltip_df['count']/tooltip_df['count'].sum())*100
+tooltip_df['rank']=tooltip_df['count'].rank(ascending=False).astype(int)
 
 # Generate a bar graph
 fig1 = px.bar(
     tooltip_df,
-    # x=category_counts.index,
-    # y=category_counts.values,
-    x='Category',
-    y='Count',
-    labels={'Category': 'CATEGORY', 'Count': 'COUNT'},
+    x=category_counts.index,
+    y=category_counts.values,
+    labels={'x': 'Category', 'y': 'Count'},
     # color=category_counts.index,
-    # color_discrete_sequence=["#6247ea"],   
-    color_discrete_sequence=["#6A5ACD", "#836FFF", "#9F7CFF"],   
+    color_discrete_sequence=["#6247ea"],   
     # color_discrete_sequence=px.colors.sequential.Plasma,   
     custom_data=['share', 'rank']
 )
@@ -161,10 +158,8 @@ fig1.update_traces(
     'Share: %{customdata[0]:.2f}%<br>' +
     'Rank: %{customdata[1]}<br>' +
     '<extra></extra>',
-    marker=dict(
-        color="#6247ea",
-        cornerradius=10      # rounded bars
-    ))
+    marker=dict(line=dict(width=0), radius=10)  # Rounded bars
+)
 # fig2: type analysis plot
 # analyzing distribution of free vs paid apps
 # since we're analyzing a categorical distribution with less than 5 or 6 categories, we use a pie chart
