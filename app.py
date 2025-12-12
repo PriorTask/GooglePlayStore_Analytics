@@ -168,41 +168,45 @@ fig1.update_traces(
 # fig2: type analysis plot
 # analyzing distribution of free vs paid apps
 # since we're analyzing a categorical distribution with less than 5 or 6 categories, we use a pie chart
+# fig2: App Type Distribution (Free vs Paid)
+
 type_counts = apps_df['Type'].value_counts()
 
-# Generate a pie chart
 fig2 = px.pie(
     values=type_counts.values,
     names=type_counts.index,
-    color_discrete_sequence=px.colors.sequential.RdBu,
-    # textinfo='percent+label',  # Show both percentage and label
-    # textfont=dict(size=20)  
-      
+    color_discrete_sequence=["#7a001f", "#c1121f"]  # Dark maroon (Free), lighter red (Paid)
 )
+
 fig2.update_traces(
-    textfont=dict(size=18),
     textinfo='label+percent',
     textposition='outside',
-    pull=[0,0.98]
-)
-# Customize layout
-fig2.update_layout(
-    plot_bgcolor='black',
-    paper_bgcolor='black',
-    font_color='white',
-    # Increase legend font size (color values on right)
-    # legend=dict(
-    #     font=dict(size=18),
-    #     title_font=dict(size=14)
-    # ),
+    textfont=dict(size=18),
+    pull=[0.08 if t == 'Paid' else 0 for t in type_counts.index],
     hovertemplate=
         "<b>App Type:</b> %{label}<br>"
         "<b>Total Apps:</b> %{value}<br>"
         "<b>Share:</b> %{percent}<extra></extra>",
-    margin=dict(l=10, r=10, t=30, b=10),
-    showlegend=False
+    hole=0.45  # donut style (remove if you want a full pie)
 )
 
+fig2.update_layout(
+    plot_bgcolor='black',
+    paper_bgcolor='black',
+    font_color='white',
+    showlegend=False,
+    margin=dict(l=20, r=20, t=40, b=20)
+)
+
+# Optional center annotation (dynamic)
+free_percent = (type_counts['Free'] / type_counts.sum()) * 100
+
+fig2.add_annotation(
+    text=f"<b>{free_percent:.1f}%</b><br>Free Apps",
+    x=0.5, y=0.5,
+    font=dict(size=22, color="white"),
+    showarrow=False
+)
 
 # building a histogram
 # rating distribution 
