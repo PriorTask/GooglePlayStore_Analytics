@@ -120,14 +120,14 @@ fig1 = px.bar(
     y=category_counts.values,
     labels={'x': 'Category', 'y': 'Count'},
     # color=category_counts.index,
-    color_discrete_sequence=["#6247ea"],   
+    color_discrete_sequence=["#000000"],   
     # color_discrete_sequence=px.colors.sequential.Plasma,   
     custom_data=['share', 'rank']
 )
 
 # Customize layout
 fig1.update_layout(
-    plot_bgcolor='black',
+    plot_bgcolor='green',
     paper_bgcolor='black',
     font=dict(color='white'),
     xaxis=dict(
