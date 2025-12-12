@@ -1,4 +1,5 @@
 import streamlit as st # type: ignore
+st.error("RUNNING FILE CHECK — IF YOU SEE THIS, THIS FILE IS ACTIVE")
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
