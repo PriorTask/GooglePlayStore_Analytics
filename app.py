@@ -862,18 +862,6 @@ st.markdown(
 # html layout
 st.markdown(
     """
-    <div style="margin-bottom:20px;">
-        <div style="font-size:22px; font-weight:900; color:#FFD700; letter-spacing:2px;">
-            INSIGHT
-        </div>
-        <div style="font-size:17px; color:#D4D4D4; max-width:900px;">
-            The top categories on the Play Store are dominated by 
-            <b style="color:#FFFFFF;">Family</b>, 
-            <b style="color:#FFFFFF;">Games</b>, and 
-            <b style="color:#FFFFFF;">Tools</b>, 
-            making up the majority of all app uploads.
-        </div>
-    </div>
     <div class="header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_Google.png/800px-Logo_2013_Google.png" alt="Google" width="100">
         <h1 style="color: white; margin: 0;">Google Play Store Reviews Analytics</h1>
