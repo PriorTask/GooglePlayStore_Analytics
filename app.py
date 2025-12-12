@@ -925,7 +925,7 @@ def styled_heading(text):
 def styled_insight(text):
     st.markdown(
         f"""
-        <p style="font-size:18px; color:#d3d3d3; line-height:1.5; text-align:center;">
+        <p style="margin: 0; padding: 10px 0 15px 0; font-size:18px;color:#d3d3d3; line-height:1.5; text-align:center;">
             💡 <b>Insight:</b> {text}
         </p>
         """,
