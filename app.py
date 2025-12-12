@@ -839,6 +839,7 @@ st.markdown(
         padding: 5px;
         background-color: #81a2cc;
         margin-top: 0px;
+        height: 20px;
     }
 
     .header img{
