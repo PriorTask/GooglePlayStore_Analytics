@@ -130,8 +130,8 @@ fig1 = px.bar(
 
 # Customize layout
 fig1.update_layout(
-    plot_bgcolor="#2B2626",
-    paper_bgcolor='#2B2626',
+    plot_bgcolor='black',
+    paper_bgcolor='black',
     font=dict(color='white'),
     xaxis=dict(
         title_font=dict(size=16),
