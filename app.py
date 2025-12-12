@@ -134,11 +134,11 @@ fig1.update_layout(
     paper_bgcolor='#2B2626',
     font=dict(color='white'),
     xaxis=dict(
-        title_font=dict(size=16),
+        title_font=dict(size=16, color="#FFB347"),
         tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=16),
+        title_font=dict(size=16, color="#FFB347"),
         tickfont=dict(size=14)   
     ),
 
@@ -862,6 +862,13 @@ st.markdown(
 # html layout
 st.markdown(
     """
+    <span style='font-size:22px; font-weight:900; color:#FFD700; letter-spacing:2px;'>
+    INSIGHT
+    </span>
+    <br>
+    <span style='font-size:17px; color:#D4D4D4;'>
+    The top categories on the Play Store are dominated by <b>Family</b>, <b>Games</b>, and <b>Tools</b>, making up the majority of all app uploads.
+    </span>
     <div class="header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_Google.png/800px-Logo_2013_Google.png" alt="Google" width="100">
         <h1 style="color: white; margin: 0;">Google Play Store Reviews Analytics</h1>
