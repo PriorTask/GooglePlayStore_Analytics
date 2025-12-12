@@ -134,11 +134,11 @@ fig1.update_layout(
     paper_bgcolor='#2B2626',
     font=dict(color='white'),
     xaxis=dict(
-        title_font=dict(size=16, color="#260F83"),
+        title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=16, color="#260F83"),
+        title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
 
