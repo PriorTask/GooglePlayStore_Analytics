@@ -179,7 +179,7 @@ fig2 = px.pie(
 )
 
 fig2.update_traces(
-    textinfo='label+percent',
+    textinfo='none',
     textposition='outside',
     textfont=dict(size=18),
     pull=[0.08 if t == 'Paid' else 0 for t in type_counts.index],
@@ -307,16 +307,18 @@ fig5.update_layout(
         domain=[0,0.9]           
     ),
     # Increase legend font size (color values on right)
-    legend=dict(
-        font=dict(size=12),
-        title_font=dict(size=16),
-        x=1.2,
-        y=1
-    ),
-    legend_title=dict(
-        text="Installs Category",
-    ),
-    margin=dict(l=10, r=10, t=20, b=10)
+    # legend=dict(
+    #     font=dict(size=12),
+    #     title_font=dict(size=16),
+    #     x=1.2,
+    #     y=1
+    # ),
+    # legend_title=dict(
+    #     text="Installs Category",
+    # ),
+    margin=dict(l=10, r=10, t=20, b=10),
+    showlegend=False
+
 )
 
 # figure6
