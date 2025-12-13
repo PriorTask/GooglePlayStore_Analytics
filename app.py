@@ -203,7 +203,7 @@ free_percent = (type_counts['Free'] / type_counts.sum()) * 100
 
 fig2.add_annotation(
     text=f"<b>{free_percent:.1f}%</b><br>Free Apps",
-    x=0.5, y=1.0,
+    x=0.5, y=0.45,
     font=dict(size=18, color="white"),
     showarrow=False
 )
