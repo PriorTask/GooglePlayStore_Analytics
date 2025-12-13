@@ -187,7 +187,7 @@ fig2.update_traces(
         "<b>App Type:</b> %{label}<br>"
         "<b>Total Apps:</b> %{value}<br>"
         "<b>Share:</b> %{percent}<extra></extra>",
-    hole=0.45  # donut style (remove if you want a full pie)
+    # hole=0.45  # donut style (remove if you want a full pie)
 )
 
 fig2.update_layout(
