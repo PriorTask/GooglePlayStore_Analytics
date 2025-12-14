@@ -208,6 +208,16 @@ fig2.add_annotation(
     showarrow=False
 )
 
+paid_percent = (type_counts['Paid'] / type_counts.sum()) * 100
+
+# Top annotation — Paid Apps
+fig2.add_annotation(
+    text=f"Paid<br>{paid_percent:.2f}%",
+    x=0.48, y=0.9,
+    font=dict(size=16, color="white"),
+    showarrow=False
+)
+
 # building a histogram
 # rating distribution 
 fig3 = px.histogram(
