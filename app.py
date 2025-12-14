@@ -213,7 +213,7 @@ paid_percent = (type_counts['Paid'] / type_counts.sum()) * 100
 # Top annotation — Paid Apps
 fig2.add_annotation(
     text=f"Paid<br>{paid_percent:.2f}%",
-    x=0.48, y=1.2,
+    x=0.48, y=1.18,
     font=dict(size=16, color="white"),
     showarrow=False
 )
