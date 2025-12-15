@@ -1043,7 +1043,7 @@ with col5:
 with col6:
     styled_heading("Number of Updates over the Years")
     st.plotly_chart(fig6, use_container_width=True)
-    styled_insight("App update activity remained relatively low until 2013, followed by a steady growth and a sharp surge after 2016.This shows rapid growth in app updates in recent years due to platform expansion.")
+    styled_insight("App update activity was low until 2013, grew steadily, and surged sharply after 2016 due to platform expansion.")
 
 st.write("---")
 col7, col8, col9 = st.columns(3)
