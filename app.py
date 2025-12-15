@@ -1041,7 +1041,7 @@ with col5:
     styled_insight("The Categories with the most installs are social and communication apps, reflecting their broad appeal and daily usage.")
 
 with col6:
-    styled_heading("Number of Updates over the Years")
+    styled_heading("Updates Count By Year")
     st.plotly_chart(fig6, use_container_width=True)
     styled_insight("App update activity was low until 2013, grew steadily, and surged sharply after 2016 due to platform expansion.")
 
