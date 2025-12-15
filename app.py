@@ -184,9 +184,7 @@ fig2.update_traces(
     textfont=dict(size=18),
     pull=[0.08 if t == 'Paid' else 0 for t in type_counts.index],
     hovertemplate=
-        "<b>App Type:</b> %{label}<br>"
         "<b>Total Apps:</b> %{value}<br>"
-        "<b>Share:</b> %{percent}<extra></extra>",
     # hole=0.45  # donut style (remove if you want a full pie)
 )
 
@@ -225,6 +223,7 @@ fig3 = px.histogram(
     x='Rating',
     nbins=20,
     # title="Rating Distribution",
+    labels={'Count':'COUNT', 'Rating':'RATING'},
     color_discrete_sequence=['#636EFA'],        
 )
 
