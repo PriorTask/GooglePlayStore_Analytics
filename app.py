@@ -356,7 +356,7 @@ apps_df['lastupdate_year']=apps_df['Last Updated'].dt.year
 # count number of updates per year
 updates_per_year=(apps_df.dropna(subset=['lastupdate_year']).groupby('lastupdate_year').size().sort_index())
 
-st.write(updates_per_year.head(10))
+# st.write(updates_per_year.head(10))
 # st.write(apps_df['Last Updated'].dt.year.value_counts().sort_index())
 
 # st.write(apps_df['lastupdate_year'].value_counts().sort_index())
