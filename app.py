@@ -221,9 +221,9 @@ fig2.add_annotation(
 fig3 = px.histogram(
     apps_df,
     x='Rating',
-    nbins=20,
+    nbins=10,
+    labels={'Rating':'RATING'},
     # title="Rating Distribution",
-    labels={'Count':'COUNT', 'Rating':'RATING'},
     color_discrete_sequence=['#636EFA'],        
 )
 
@@ -240,12 +240,19 @@ fig3.update_layout(
         tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title=dict(text="Count"),
+        title=dict(text="COUNT"),
         title_font=dict(size=18),
         tickfont=dict(size=14)   
     ),
 
     # Increase legend font size (color values on right)
+)
+
+# tooltip hover template
+fig3.update_traces(
+    hovertemplate=
+    "<b>Rating Range:</b> %{x}<br>"
+    "<b>Count:</b> %{y}<extra></extra>"
 )
 
 # 4.) Displaying sentiment analysis using bar chart 
