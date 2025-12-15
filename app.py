@@ -103,6 +103,10 @@ text_color='white'
 # title_font={'size':12}
 # axis_font={'size':10}
 
+# to export the dataframe as csv file 
+# apps_df.to_csv("apps_df.csv", index=False)
+
+
 # 1.) To visualize the top 5 app categories in the Google Play Store
 category_counts = apps_df['Category'].value_counts().nlargest(5)
 
@@ -343,12 +347,26 @@ fig5.update_layout(
 # figure6
 # Generate a line graph
 
-updates_per_year = apps_df.groupby('Category')['Installs'].sum().nlargest(10)
+# to find out the data type of entries of Last Updated column
+# st.write(apps_df['Last Updated'].dtype)
+# updates_per_year = apps_df.groupby('Category')['Installs'].sum().nlargest(10)
+apps_df['lastupdate_year']=apps_df['Last Updated'].dt.year
 
+
+# count number of updates per year
+updates_per_year=(apps_df.dropna(subset=['lastupdate_year']).groupby('lastupdate_year').size().sort_index())
+
+st.write(updates_per_year.head(10))
+# st.write(apps_df['Last Updated'].dt.year.value_counts().sort_index())
+
+# st.write(apps_df['lastupdate_year'].value_counts().sort_index())
+
+# st.write()
 
 fig6 = px.line(
     x=updates_per_year.index,
     y=updates_per_year.values,
+    markers=True, 
     labels={'x': 'Year', 'y': 'Number of Updates'},
     color_discrete_sequence=['#AB63FA'],
      
@@ -363,22 +381,24 @@ fig6.update_layout(
     xaxis=dict(
         title=dict(text='YEAR'),
         title_font=dict(size=16),
-        tickfont=dict(size=14)   
+        tickfont=dict(size=13)   
     ),
     yaxis=dict(
-        title=dict(text='NUMBER Of UPDATES'),
+        title=dict(text='NUMBER OF UPDATES'),
         title_font=dict(size=16),
-        tickfont=dict(size=14)   
+        tickfont=dict(size=13)   
     ),
 
     # Increase legend font size (color values on right)
-    legend=dict(
-        font=dict(size=18),
-        title_font=dict(size=18)
-    ),
-    legend_title=dict(
-        text="Color",
-    ),
+    # legend=dict(
+    #     font=dict(size=18),
+    #     title_font=dict(size=18)
+    # ),
+    # legend_title=dict(
+    #     text="Color",
+    # ),
+    showlegend=False, 
+    height=500, 
     margin=dict(l=10, r=10, t=30, b=10)
 )
 
@@ -1023,7 +1043,7 @@ with col5:
 with col6:
     styled_heading("Number of Updates over the Years")
     st.plotly_chart(fig6, use_container_width=True)
-    styled_insight("Updates have been increasing over the years, showing that developers have been actively maintaining and improving their apps.")
+    styled_insight("App update activity remained relatively low until 2013, followed by a steady growth and a sharp surge after 2016.This shows rapid growth in app updates in recent years due to platform expansion.")
 
 st.write("---")
 col7, col8, col9 = st.columns(3)
