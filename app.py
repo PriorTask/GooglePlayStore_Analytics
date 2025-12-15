@@ -483,12 +483,12 @@ fig9.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title=dict(text='LAST UPDATED')
+        title=dict(text='LAST UPDATED'), 
         title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title=dict(text='RATING')
+        title=dict(text='RATING'), 
         title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
