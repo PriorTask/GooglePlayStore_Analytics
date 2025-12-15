@@ -236,12 +236,12 @@ fig3.update_layout(
     font_color='white',
     # title_font=dict(size=16),
     xaxis=dict(
-        title_font=dict(size=18),
+        title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
     yaxis=dict(
         title=dict(text="COUNT"),
-        title_font=dict(size=18),
+        title_font=dict(size=16),
         tickfont=dict(size=14)   
     ),
 
@@ -262,7 +262,7 @@ sentiment_counts = reviews_df['Sentiment_Score'].value_counts()
 fig4 = px.bar(
     x=sentiment_counts.index,
     y=sentiment_counts.values,
-    labels={'x': 'Sentiment Score', 'y': 'Count'},
+    labels={'x': 'SENTIMENT SCORE', 'y': 'COUNT'},
     color=sentiment_counts.index,
     color_discrete_sequence=px.colors.sequential.RdPu,
      
@@ -275,23 +275,24 @@ fig4.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
 
     # Increase legend font size (color values on right)
-    legend=dict(
-        font=dict(size=20),
-        title_font=dict(size=18)
-    ),
-    legend_title=dict(
-        text="Score",
-    ),
-    margin=dict(l=10, r=10, t=30, b=10)
+    # legend=dict(
+    #     font=dict(size=20),
+    #     title_font=dict(size=18)
+    # ),
+    # legend_title=dict(
+    #     text="Score",
+    # ),
+    margin=dict(l=10, r=10, t=30, b=10), 
+    showlegend=False
 )
 
 # Generate a bar graph
