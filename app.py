@@ -302,7 +302,7 @@ fig5 = px.bar(
     x=installs_by_category.values,
     y=installs_by_category.index,
     orientation='h',  # horizontal bar chart 
-    labels={'x': 'Installs', 'y': 'Category'},
+    labels={'x': 'INSTALLS', 'y': 'CATEGORY'},
     color=installs_by_category.index,
     color_discrete_sequence=px.colors.sequential.Blues,
      
@@ -315,12 +315,14 @@ fig5.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=18),
-        tickfont=dict(size=12)  
+        title=dict(text='INSTALLS'),
+        title_font=dict(size=16),
+        tickfont=dict(size=14)  
     ),
     yaxis=dict(
+        title=dict(text='CATEGORY'),
         title_font=dict(size=16),
-        tickfont=dict(size=12),
+        tickfont=dict(size=14),
         domain=[0,0.9]           
     ),
     # Increase legend font size (color values on right)
@@ -359,12 +361,14 @@ fig6.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=13)   
+        title=dict(text='YEAR'),
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=18),
-        tickfont=dict(size=18)   
+        title=dict(text='NUMBER Of UPDATES'),
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
 
     # Increase legend font size (color values on right)
@@ -396,21 +400,24 @@ fig7.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=12)
+        title=dict(text='CATEGORY'),
+        title_font=dict(size=16),
+        tickfont=dict(size=14)
     ),
     yaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18)
+        title=dict(text='REVENUE'),
+        title_font=dict(size=16),
+        tickfont=dict(size=14)
     ),
-    legend=dict(
-        font=dict(size=18),
-        title=dict(
-            text="App Category",
-            font=dict(size=18)
-        )
-    ),
-    margin=dict(l=10, r=10, t=30, b=10)
+    # legend=dict(
+    #     font=dict(size=18),
+    #     title=dict(
+    #         text="App Category",
+    #         font=dict(size=18)
+    #     )
+    # ),
+    # margin=dict(l=10, r=10, t=30, b=10),
+    showlegend=False
 )
 
 
@@ -437,21 +444,24 @@ fig8.update_layout(
     paper_bgcolor='black',
     font_color='white',
     xaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=13)   
+        title=dict(text='GENRE'),
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
     yaxis=dict(
-        title_font=dict(size=20),
-        tickfont=dict(size=18)   
+        title=dict(text='COUNT'),
+        title_font=dict(size=16),
+        tickfont=dict(size=14)   
     ),
 
     # Increase legend font size (color values on right)
-    legend=dict(
-        title=dict(text="Revenue Category"),
-        font=dict(size=18),
-        title_font=dict(size=20)
-    ),
-    margin=dict(l=10, r=10, t=30, b=10)
+    # legend=dict(
+    #     title=dict(text="Revenue Category"),
+    #     font=dict(size=18),
+    #     title_font=dict(size=20)
+    # ),
+    # margin=dict(l=10, r=10, t=30, b=10)
+    showlegend=False
 )
 
 # figure9 -- scatter plot
