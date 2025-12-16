@@ -410,7 +410,8 @@ fig7 = px.bar(
     x=revenue_by_category.index,
     y=revenue_by_category.values,
     labels={'x': 'Category', 'y': 'Revenue'},
-    color=revenue_by_category.index.to_list(),
+    # color=revenue_by_category.index.to_list(),
+    color=revenue_by_category.values,
     # color_discrete_sequence=px.colors.sequential.Greens,
     color_continuous_scale='Greens'
 )
